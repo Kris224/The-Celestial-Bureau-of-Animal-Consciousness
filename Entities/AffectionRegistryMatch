@@ -1,0 +1,33 @@
+{
+  "name": "AffectionRegistryMatch",
+  "type": "object",
+  "properties": {
+    "user_pet_name": {
+      "type": "string"
+    },
+    "user_pet_photo_url": {
+      "type": "string"
+    },
+    "match_pet_name": {
+      "type": "string"
+    },
+    "match_pet_photo_url": {
+      "type": "string"
+    },
+    "match_pet_bio": {
+      "type": "string"
+    },
+    "first_conversation": {
+      "type": "string"
+    },
+    "case_number": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_pet_name",
+    "user_pet_photo_url",
+    "match_pet_name",
+    "match_pet_photo_url"
+  ]
+}

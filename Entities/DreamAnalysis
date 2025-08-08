@@ -1,0 +1,41 @@
+{
+  "name": "DreamAnalysis",
+  "type": "object",
+  "properties": {
+    "pet_name": {
+      "type": "string",
+      "description": "Name of the pet"
+    },
+    "pet_photo_url": {
+      "type": "string",
+      "description": "URL of the uploaded pet photo"
+    },
+    "case_number": {
+      "type": "string",
+      "description": "Official bureaucratic case number"
+    },
+    "dream_analysis": {
+      "type": "string",
+      "description": "The AI-generated dream interpretation"
+    },
+    "processing_status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "under_review",
+        "approved",
+        "completed"
+      ],
+      "default": "submitted",
+      "description": "Current status in the bureaucratic process"
+    },
+    "dream_category": {
+      "type": "string",
+      "description": "Category of dream (e.g. 'Epic Adventure', 'Culinary Fantasy')"
+    }
+  },
+  "required": [
+    "pet_name",
+    "pet_photo_url"
+  ]
+}
