@@ -1,0 +1,59 @@
+{
+  "name": "AlchemicalAnalysis",
+  "type": "object",
+  "properties": {
+    "pet_name": {
+      "type": "string",
+      "description": "Name of the pet"
+    },
+    "pet_photo_url": {
+      "type": "string",
+      "description": "URL of the uploaded pet photo"
+    },
+    "case_number": {
+      "type": "string",
+      "description": "Official alchemical case number"
+    },
+    "essence_composition": {
+      "type": "object",
+      "description": "Pie chart data for essence traits",
+      "properties": {
+        "mischief": {
+          "type": "number"
+        },
+        "cuddle_essence": {
+          "type": "number"
+        },
+        "treat_magnetism": {
+          "type": "number"
+        },
+        "nap_power": {
+          "type": "number"
+        },
+        "zoomie_energy": {
+          "type": "number"
+        }
+      }
+    },
+    "mythical_ancestry": {
+      "type": "string",
+      "description": "The mythical creature ancestor"
+    },
+    "ancestry_description": {
+      "type": "string",
+      "description": "Description of the ancestral connection"
+    },
+    "cuteness_overload_probability": {
+      "type": "number",
+      "description": "Percentage probability of cuteness overload"
+    },
+    "cuteness_formula": {
+      "type": "string",
+      "description": "The fake scientific formula for cuteness"
+    }
+  },
+  "required": [
+    "pet_name",
+    "pet_photo_url"
+  ]
+}
