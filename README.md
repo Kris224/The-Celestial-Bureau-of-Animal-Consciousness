@@ -37,7 +37,9 @@ Dream
 <img width="2121" height="1243" alt="Screenshot 2025-08-09 062018" src="https://github.com/user-attachments/assets/dec8b336-ed84-4f16-a30f-517d0b02b9d3" />
 
 <img width="2125" height="1218" alt="Screenshot 2025-08-09 062103" src="https://github.com/user-attachments/assets/16d98059-cf65-4cf4-9833-13b6fe842a35" />
+
 # Installation
+```
 1. Clone the repository:
    bash
    git clone https://github.com/Kris224/The-Celestial-Bureau-of-Animal-Consciousness.git
@@ -88,7 +90,7 @@ Match
 <img width="2100" height="1165" alt="Screenshot 2025-08-09 062402" src="https://github.com/user-attachments/assets/eccfa9fa-2394-464e-977e-e4eb5838190e" />
 
 # Diagrams
-```
+
 ```mermaid
 graph TD
     A[User] -- Uploads Photo & Name --> B(Frontend - Next.js);
@@ -119,7 +121,7 @@ graph TD
 # Video
 
 [Add your demo video link here]
-*This video demonstrates the full user journey and highlights the conversion of standard inputs into the Base 44 system before generating the final, glorious report.*
+
 # Additional Demos
   https://app--the-celestial-bureau-of-animal-cons-99e4c2a4.base44.app/
 ## Team Contributions
