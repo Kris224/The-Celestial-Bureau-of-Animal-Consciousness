@@ -1,0 +1,56 @@
+{
+  "name": "PassportApplication",
+  "type": "object",
+  "properties": {
+    "pet_name": {
+      "type": "string",
+      "description": "Name of the pet citizen"
+    },
+    "pet_photo_url": {
+      "type": "string",
+      "description": "URL of the uploaded pet photo"
+    },
+    "birth_adoption_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Pet's birth or adoption date"
+    },
+    "city": {
+      "type": "string",
+      "description": "Pet's city of residence"
+    },
+    "passport_number": {
+      "type": "string",
+      "description": "Official passport identification number"
+    },
+    "profession": {
+      "type": "string",
+      "description": "AI-generated absurd profession"
+    },
+    "visa_stamps": {
+      "type": "array",
+      "description": "List of household location visa stamps",
+      "items": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string"
+          },
+          "stamp_date": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "passport_image_url": {
+      "type": "string",
+      "description": "Generated passport image URL"
+    }
+  },
+  "required": [
+    "pet_name",
+    "pet_photo_url",
+    "birth_adoption_date",
+    "city"
+  ]
+}
