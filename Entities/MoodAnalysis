@@ -1,0 +1,45 @@
+{
+  "name": "MoodAnalysis",
+  "type": "object",
+  "properties": {
+    "pet_name": {
+      "type": "string",
+      "description": "Name of the pet"
+    },
+    "pet_photo_url": {
+      "type": "string",
+      "description": "URL of the uploaded pet photo"
+    },
+    "case_number": {
+      "type": "string",
+      "description": "Official mood analysis case number"
+    },
+    "current_mood": {
+      "type": "string",
+      "description": "The detected mood (e.g., 'Contemplatively Mischievous', 'Regally Bored')"
+    },
+    "mood_percentage": {
+      "type": "number",
+      "description": "Confidence percentage of mood detection"
+    },
+    "mood_description": {
+      "type": "string",
+      "description": "Detailed mood analysis description"
+    },
+    "recommended_activities": {
+      "type": "array",
+      "description": "List of recommended activities based on mood",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mood_color": {
+      "type": "string",
+      "description": "Color representing the mood"
+    }
+  },
+  "required": [
+    "pet_name",
+    "pet_photo_url"
+  ]
+}

@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { PassportApplication } from "@/entities/PassportApplication";
-import { UploadFile, InvokeLLM, GenerateImage } from "@/integrations/Core";
+import { UploadFile, InvokeLLM } from "@/integrations/Core"; // Removed GenerateImage
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,7 +10,7 @@ import { MapPin, Upload, CheckCircle, Camera, RotateCcw } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 import PassportProcessing from "../components/passport/PassportProcessing";
-import PassportResult from "../components/passport/PassportResult";
+import PassportResult from "../Components/passport/PassportResult";
 
 export default function PassportDivisionPage() {
   const [petName, setPetName] = useState("");
@@ -78,39 +78,19 @@ Make it official-sounding but completely ridiculous.`,
 
         const passportNumber = `CC-${Date.now().toString().slice(-6)}`;
         
-        // Generate passport image with all details included
-        const passportImagePrompt = `Create an official-looking pet passport document. IMPORTANT: This is for a specific pet. You MUST include the following details directly on the passport image.
-
-        **Document Style:**
-        - A vintage, formal government document layout with an aged, light-brown paper texture.
-        - Use official-looking (but fake) seals and ornate, old-fashioned borders.
-        - The main title at the top should be "INTERNATIONAL COMMONWEALTH OF COUCH-SURFING CREATURES".
-        - All text should be in a classic, official-looking font.
-
-        **Pet Details to Include:**
-        - **Photo:** Generate a passport-style photo of a pet that looks like it could be named "${petName}". Place this in the top-left corner.
-        - **Name:** ${petName}
-        - **Profession:** ${aiData.profession}
-        - **Passport No.:** ${passportNumber}
-        - **Date of Birth:** ${birthDate}
-        - **City of Residence:** ${city}
-        - **Issue Date:** ${new Date().toISOString().split('T')[0]}
-
-        **Visual Elements:**
-        - Scatter 3-4 colorful, whimsical visa stamps on the document. The stamps should look like they are from places like "Kingdom of the High Shelf" or "The Forbidden Countertop".
-        `;
-
-        const { url: passportImageUrl } = await GenerateImage({ prompt: passportImagePrompt });
+        // Removed passport background image generation
+        // const passportBackgroundPrompt = `...`; // This constant is removed
+        // const { url: backgroundPassportUrl } = await GenerateImage({ prompt: passportBackgroundPrompt }); // This call is removed
         
         const finalData = {
           petName,
-          photoUrl, // User's original photo for the details card
+          photoUrl,
           birthDate,
           city,
           passportNumber,
           profession: aiData.profession,
           visaStamps: aiData.visa_stamps,
-          passportImageUrl // The newly generated image with all details
+          // passportImageUrl: backgroundPassportUrl // This property is removed
         };
         
         setPassportData(finalData);
@@ -124,7 +104,7 @@ Make it official-sounding but completely ridiculous.`,
           passport_number: passportNumber,
           profession: aiData.profession,
           visa_stamps: aiData.visa_stamps,
-          passport_image_url: passportImageUrl
+          // passport_image_url: backgroundPassportUrl // This property is removed
         });
 
         setProcessingState("done");
