@@ -119,8 +119,7 @@ graph TD
 ### Project Demo
 
 # Video
-
-[Add your demo video link here]
+https://youtu.be/h8zpCod3HMc
 
 # Additional Demos
   https://app--the-celestial-bureau-of-animal-cons-99e4c2a4.base44.app/
